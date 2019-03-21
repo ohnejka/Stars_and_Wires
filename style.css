@@ -1,0 +1,14 @@
+body {
+    width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    overflow: hidden;
+    background-color: #17182f;
+}
+
+#animated {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
