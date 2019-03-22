@@ -45,15 +45,15 @@ scene.add(plane);
 
 let hemisphereLight = new THREE.HemisphereLight(0xe3feff, 0xe6ddc8, 0.7);
 scene.add(hemisphereLight);
-hemisphereLight.position.y = 1000;
+hemisphereLight.position.y = 8000;
 
-let pointLight = new THREE.PointLight(0xffffff, 1.5);
+let pointLight = new THREE.PointLight(0xffffff, 5);
 pointLight.position.z = 400;
 scene.add(pointLight);
 
 let pointLight2 = new THREE.PointLight(0xffffff, 2);
-pointLight2.position.y = 800;
-pointLight2.position.z = 800;
+pointLight2.position.y = 12000;
+pointLight2.position.z = 2000;
 scene.add(pointLight2);
 
 
@@ -91,10 +91,10 @@ render();
 var count = 0
 function render() {
 		requestAnimationFrame(render);
-    var x = camera.position.x;
+    var x = camera.position.x; // 0
     var z = camera.position.z;
-    camera.position.x = x * Math.cos(0.001) + z * Math.sin(0.001) - 10;
-    camera.position.z = z * Math.cos(0.001) - x * Math.sin(0.001) - 10;
+    camera.position.x = x * Math.cos(0.001) - z * Math.sin(0.001) - 5;
+    camera.position.z = z * Math.cos(0.001) + x * Math.sin(0.001);
     camera.lookAt(new THREE.Vector3(0, 8000, 0))
 
     for (let i = 0; i < planeGeometry.vertices.length; i++) {
